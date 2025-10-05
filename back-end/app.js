@@ -79,16 +79,16 @@ app.post('/messages/save', async (req, res) => {
 })
 
 //a route to handle photo and paragraph.
-app.get("/api/about", (req, res) => {
+app.get("/about", (req, res) => {
   res.json({
     name: "Alexander Escobar",
     title: "About Me Paragraph",
     paragraphs:[
-      "I’m Alexander Escobar, a Computer Engineering student at NYU Tandon School of Engineering with a strong interest in hardware–software integration, machine learning, and sustainable technology.",
-      "Over the past few years, I’ve worked on projects ranging from Verilog-based ALUs and embedded systems to AI-powered image classification and sensor-driven sustainability solutions.",
+      "I’m Alexander Escobar, a Computer Engineering student at NYU Tandon School of Engineering with a strong interest in hardware software integration, machine learning, and sustainable technology.",
+      "Over the past few years, I’ve worked on projects ranging from Verilog based ALUs and embedded systems to AI powered image classification and sensor driven sustainability solutions.",
       "My experiences have strengthened my technical, analytical, and mentorship skills. I’m passionate about developing innovative technologies that promote sustainability, accessibility, and global impact."
     ],
-    imageUrl: "/Alex.jpg"
+    imageUrl: "/Alex.JPG"
   })
 })
 
