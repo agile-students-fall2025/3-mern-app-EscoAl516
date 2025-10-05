@@ -7,6 +7,9 @@ export default function AboutUs() {
 
   useEffect(() => {
     fetch(`${API_BASE}/about`)
+      .then((r) => r.json())
+      .then(setData)
+      .catch((e) => console.error("About fetch failed:", e));
   }, []);
 
   if (!data) return <p>Loading…</p>;
@@ -16,7 +19,9 @@ export default function AboutUs() {
       <h1>About Us</h1>
       <img
         src={data.imageUrl}          // resolves to the FRONT-END host: /Alex.jpg
+        alt={data.name}
         width="500"
+        style={{ display: "block", margin: "16px auto", borderRadius: 12 }}
       />
       <h3>{data.name}</h3>
       <p style={{ marginTop: 0, color: "#666" }}>{data.title}</p>
